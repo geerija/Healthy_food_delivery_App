@@ -1,0 +1,208 @@
+/*
+DESIGN---INFO
+
+1.Typography System:
+
+--FONT SIZE SYSTEM (px)
+   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--font-weight:
+
+--line-height:
+  default:1
+
+
+2.Colors:   
+
+  primary:#e67e22
+  Tints: 
+  Shades: 
+  Accents: 
+  Greys: 
+  #555
+
+3.Shadows
+4.Border Radius
+5.WhiteSpace
+
+--SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+body {
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  font-family: "Rubik", sans-serif;
+  /*it only works if nothing is absolute positioned to body*/
+  overflow-x: hidden;
+}
+/***************************************/
+/*General COMPONENTS reusable*/
+/*******************************************/
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.4rem rgba(230, 125, 34, 0.5);
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 0.8rem;
+  transition: all 0.4s;
+}
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #45260a;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+.btn--outline:link,
+.btn-outline:visited {
+  background-color: #fdf2e9;
+  color: #555;
+}
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fff;
+  box-shadow: inset(0 0 0 10px #fff);
+}
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: none;
+  border: 1px solid transparent;
+}
+
+.margin-right-sm {
+  margin-right: 1rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 2.8rem !important;
+}
+.container {
+  padding: 0 5.8rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  margin-bottom: 2.8rem;
+}
+.grid:last-child {
+  margin-bottom: 0;
+}
+.grid--center-v {
+  align-items: center;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.heading-primary {
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-secondary {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+.heading-tertiary {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.7px;
+}
+
+.list-item {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  line-height: 1.2;
+}
+.list-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #e67e22;
+}
